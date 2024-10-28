@@ -29,6 +29,35 @@ async function fetchClientInfo(id) {
   }
 }
 
+export async function generateMetadata({ params }) {
+    const clientInfo = await fetchClientInfo(params.id);
+  
+    if (!clientInfo) {
+      return {
+        title: "Error",
+        description: "Error loading data",
+      };
+    }
+  
+    return {
+      title: clientInfo.details.name || "Default Title",
+      description: "Lorem ipsum dolor sit amet...",
+      openGraph: {
+        title: clientInfo.details.name,
+        description: clientInfo.details.companyName +' - '+clientInfo.details.designation,
+        images: [
+          {
+            url: clientInfo.details.profileImage || "/default-image.jpg",
+            width: 800,
+            height: 600,
+            alt: clientInfo.details.name,
+          },
+        ],
+        url: `https://www.taptocontact.com/portfolio/${clientInfo.client}`,
+      },
+    };
+  }
+
 const Page = async ({ params }) => {
   const { id } = await params;
   const clientInfo = await fetchClientInfo(id);
@@ -37,21 +66,14 @@ const Page = async ({ params }) => {
     return <div>Error loading data.</div>;
   }
 
-  const pageTitle = clientInfo.details.name || "Default Title";
-  const pageDescription = "Lorem ipsum dolor sit amet...";
-  const pageImage = clientInfo.details.profileImage || "/default-image.jpg";
-  const pageUrl = `https://www.taptocontact.com/portfolio/${clientInfo.client}`;
+//   const pageTitle = clientInfo.details.name || "Default Title";
+//   const pageDescription = "Lorem ipsum dolor sit amet...";
+//   const pageImage = clientInfo.details.profileImage || "/default-image.jpg";
+//   const pageUrl = `https://www.taptocontact.com/portfolio/${clientInfo.client}`;
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={'pageDescription'} />
-        <meta property="og:title" content={'pageTitle'} />
-        <meta property="og:description" content={'pageDescription'} />
-        <meta property="og:image" content={'pageImage'} />
-        <meta property="og:url" content={pageUrl} />
-      </Head>
+      
 
       <PortfolioCell clientInfo={clientInfo} id={id} />
     </>
