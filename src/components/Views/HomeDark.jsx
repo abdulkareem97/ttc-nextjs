@@ -165,7 +165,7 @@ END:VCARD`;
                 {/*  Left Side Starts */}
                 <div className="col-12 col-lg-4">
                   <h3 className="pb-3 mb-0 text-uppercase custom-title ft-wt-600">
-                    Don't be shy !
+                    Dont be shy !
                   </h3>
                   <p className="mb-4 open-sans-font">
                     Feel free to get in touch with me. I am always open to

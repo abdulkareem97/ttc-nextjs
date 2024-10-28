@@ -10,6 +10,8 @@ import emailjs from "@emailjs/browser";
 
 const Contact = ({userDetail}) => {
   const form = useRef();
+  const [subject,setSubject] = useState('')
+  const [message,setMessage] = useState('')
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -58,8 +60,7 @@ const Contact = ({userDetail}) => {
     return <div>User not found</div>;
   }
 
-  const [subject,setSubject] = useState('')
-  const [message,setMessage] = useState('')
+
 
 
 
