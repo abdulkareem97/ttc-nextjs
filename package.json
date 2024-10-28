@@ -9,14 +9,45 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
-    "next": "15.0.1"
+    "@emailjs/browser": "^3.6.2",
+    "aos": "^2.3.4",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.1.3",
+    "humanize-string": "2.1.0",
+    "next": "15.0.1",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-animated-cursor": "^2.5.1",
+    "react-dom": "18.2.0",
+    "react-modal": "^3.15.1",
+    "react-router-dom": "^6.21.1",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
+    "react-tabs": "^5.1.0",
+    "react-transition-group": "^4.4.2",
+    "scss": "^0.2.4",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^1.0.1",
+
+    "@react-google-maps/api": "^2.19.2",
+    "country-state-city": "^3.2.1",
+    "crypto-js": "^4.2.0",
+    "firebase": "^10.7.1",
+    "jodit-react": "^1.3.39",
+    "qr": "^0.2.4",
+    "qrcode": "^1.5.3",
+    "qrcode.react": "^3.1.0",
+    "react-country-state-city": "^1.1.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^4.12.0",
+    "react-select": "^5.8.0",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "15.0.1"
+    "eslint-config-next": "15.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }
