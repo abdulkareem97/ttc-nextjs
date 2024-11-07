@@ -30,7 +30,8 @@ async function fetchClientInfo(id) {
 }
 
 export async function generateMetadata({ params }) {
-    const clientInfo = await fetchClientInfo(params.id);
+    const { id } = await params;
+    const clientInfo = await fetchClientInfo(id);
   
     if (!clientInfo) {
       return {

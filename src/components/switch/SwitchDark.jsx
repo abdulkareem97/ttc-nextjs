@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import lightImage from "../assets/img/sun.png";
+import Image from "next/image";
+// import img from '../assets/img/sun.png'
 
 const SwitchDark = () => {
   const [isDark, setIsDark] = useState(true);
@@ -28,7 +30,7 @@ const SwitchDark = () => {
       />
       <div className="switch-handle">
         <span className="light-text">
-          <img src={lightImage} alt="swicher" className="filter_1" />
+          <Image src={lightImage} alt="swicher" className="filter_1" />
         </span>
         <span className="dark-text">
           <i className="fa fa-moon-o" aria-hidden="true"></i>
